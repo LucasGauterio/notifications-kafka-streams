@@ -1,0 +1,35 @@
+server:
+  port: 8081
+management:
+  endpoint:
+    health:
+      show-details: always
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - env
+          - health
+          - info
+          - refresh
+spring:
+  application:
+    name: corp-notifications-api
+  cloud:
+    stream:
+      function:
+        routing:
+          enabled: true
+        definition: processor;consumer
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers:
+            - ${KAFKA_HOST:localhost}:${KAFKA_PORT:9092}
+      bindings:
+        processor-in-0:
+          group: input-notifications-api-functional-processor
+        processor-out-0:
+          destination: notifications-stream
