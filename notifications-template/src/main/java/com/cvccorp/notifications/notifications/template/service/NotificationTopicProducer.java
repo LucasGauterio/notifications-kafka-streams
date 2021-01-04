@@ -1,6 +1,6 @@
 package com.cvccorp.notifications.notifications.template.service;
 
-import com.cvccorp.notifications.notifications.template.dto.RequestMessage;
+import com.cvccorp.notifications.notifications.common.dto.RequestMessage;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.stream.annotation.EnableBinding;

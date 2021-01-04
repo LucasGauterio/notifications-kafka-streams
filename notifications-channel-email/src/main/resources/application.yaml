@@ -25,12 +25,7 @@ spring:
           brokers:
             - ${KAFKA_HOST:localhost}:${KAFKA_PORT:9092}
       bindings:
-        input:
-          binder: kafka
-          destination: notifications-stream
-          content-type: application/json
-          group: input-notifications-channel-email
-        output:
-          binder: kafka
-          destination: notifications-stream
-          content-type: application/json
+        sendEmail-in-0:
+          destination: dispatcher-out-0
+          contentType: application/json
+          group: email

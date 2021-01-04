@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8085
 management:
   endpoint:
     health:
@@ -16,7 +16,7 @@ management:
           - refresh
 spring:
   application:
-    name: corp-notifications-api
+    name: corp-notifications-audit
   cloud:
     stream:
       default-binder: kafka
@@ -25,15 +25,7 @@ spring:
           brokers:
             - ${KAFKA_HOST:localhost}:${KAFKA_PORT:9092}
       bindings:
-        dispatcher-in-0:
+        audit-in-0:
+          destination: sendEmail-out-0
           contentType: application/json
-        dispatcher-out-0:
-          producer:
-            requiredGroups:
-              - email
-          contentType: application/json
-        dispatcher-out-1:
-          producer:
-            requiredGroups:
-              - whatsapp
-          contentType: application/json
+

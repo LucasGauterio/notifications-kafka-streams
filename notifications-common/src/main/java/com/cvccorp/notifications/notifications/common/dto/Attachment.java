@@ -1,10 +1,11 @@
-package com.cvccorp.notifications.notifications.dto;
+package com.cvccorp.notifications.notifications.common.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 @AllArgsConstructor
 @NoArgsConstructor

@@ -1,11 +1,12 @@
-package com.cvccorp.notifications.notifications.channel.email.dto;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
+package com.cvccorp.notifications.notifications.common.dto;
+
+import java.util.HashMap;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 @AllArgsConstructor
 @NoArgsConstructor
