@@ -1,6 +1,5 @@
 package com.cvccorp.notifications.notifications.channel.email;
 
-import java.time.Duration;
 import java.util.function.Function;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
