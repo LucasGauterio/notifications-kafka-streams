@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @Data
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RequestMessage {
+public class RequestMessage  {
 
     private String producer;
 

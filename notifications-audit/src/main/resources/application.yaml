@@ -28,4 +28,6 @@ spring:
         audit-in-0:
           destination: sendEmail-out-0
           contentType: application/json
-
+        audit-in-1:
+          destination: sendWhatsapp-out-0
+          contentType: application/json
