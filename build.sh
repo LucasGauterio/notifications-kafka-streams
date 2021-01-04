@@ -6,4 +6,6 @@ cd ../notifications-template
 sh build.sh
 cd ../notifications-channel-email
 sh build.sh
+cd ../notifications-audit
+sh build.sh
 

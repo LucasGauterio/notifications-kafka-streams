@@ -19,17 +19,21 @@ spring:
     name: corp-notifications-api
   cloud:
     stream:
-      function:
-        routing:
-          enabled: true
-        definition: processor;consumer
       default-binder: kafka
       kafka:
         binder:
           brokers:
             - ${KAFKA_HOST:localhost}:${KAFKA_PORT:9092}
       bindings:
-        processor-in-0:
-          group: input-notifications-api-functional-processor
-        processor-out-0:
-          destination: notifications-stream
+        dispatcher-in-0:
+          contentType: application/json
+        dispatcher-out-0:
+          producer:
+            requiredGroups:
+              - email
+          contentType: application/json
+        dispatcher-out-1:
+          producer:
+            requiredGroups:
+              - whatsapp
+          contentType: application/json

@@ -1,6 +1,6 @@
 package com.cvccorp.notifications.notifications.template.service;
 
-import com.cvccorp.notifications.notifications.template.dto.RequestMessage;
+import com.cvccorp.notifications.notifications.common.dto.RequestMessage;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import lombok.AllArgsConstructor;

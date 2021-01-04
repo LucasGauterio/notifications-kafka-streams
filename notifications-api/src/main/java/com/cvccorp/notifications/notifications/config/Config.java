@@ -1,7 +1,10 @@
-package com.cvccorp.notifications.audit;
+package com.cvccorp.notifications.notifications.config;
 
+import io.micrometer.core.lang.NonNull;
+import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,7 +14,10 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 @Configuration
 public class Config {
 
+
+
     @Bean
+    @Primary
     public ObjectMapper jacksonObjectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);
@@ -21,4 +27,7 @@ public class Config {
         objectMapper.findAndRegisterModules();
         return objectMapper;
     }
+
+
+
 }
